@@ -55,30 +55,41 @@ puts to_roman(1999)  # should return "MCMXCIX"
 Do not publish your code on a public repl.it or repo or other public means.
 
 ## Rewrite the question in your own words:
-
+Write a function that converts an integer (input) to a string (output): the string must represt the intergers value in roman numerals
 
 ## What assumptions will you make about this problem if you cannot ask any more clarifying questions? What are your reasons for making those assumptions?
-
+- Input will not be greater than 4000
+- 
 
 ## What are your initial thoughts about this problem? (high level design, 2-3 sentences)
-
+- Use an object to set key:value pairs of romanNumeralValue:integerValue
+- Utilize a few math related methods to break down input value to the remainder from key:value pairs
 
 ## How would you identify the elements of this problem?
 
 - [ ] Searching of Data
 - [ ] Sorting of Data
-- [ ] Pattern Recognition
+- [x] Pattern Recognition
 - [ ] Build/Navigate a Grid
-- [ ] Math
+- [x] Math
 - [ ] Language API knowledge
 - [ ] Optimization
 
 
 ## Which data structure(s) do you think you'll use? What pros/cons do you see with that choice?
-
+Map, i believe?
 
 ## Write out a few lines of initial pseudocode: (mid-level design, NOT REAL CODE)
+- Create an object of key:value pairs (romanNumeralValue:valueAsInteger)
+- set result to an empty string
+- iterate through object keys
+- determine a replace amount, checking input divided by each keys value (ex: 2000 / 1000 = 2)
+- Subtract input by the (replace amount multiplied by unique key's value) (ex: 2000 - (2 * 1000)
+- Concatenate result (empty string) with key as manytimes as the value of the replace amount
 
 ## Write out any implementation code OR link to repl
+[REPL](https://replit.com/@KevinHartmann23/Roman-Numeral-Converter)
 
 ## What is the Big O complexity of your solution?
+Constant Time - the iteration will always be the same, no matter what the value of `num` is
+O(1)
