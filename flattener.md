@@ -55,7 +55,7 @@ or in JS:
 
 
 ## What are your initial thoughts about this problem? (high level design, 2-3 sentences)
-
+removing nested brackets can get confusing
 
 ## How would you identify the elements of this problem?
 
@@ -69,10 +69,17 @@ or in JS:
 
 
 ## Which data structure(s) do you think you'll use? What pros/cons do you see with that choice?
-
+Array
 
 ## Write out a few lines of initial pseudocode: (mid-level design, NOT REAL CODE)
+iterate - reduce
+//is element an array? 
+//yes? push index0
+//no push element
+repeat
+//break case -> if there is NOT an array inside the array return result // else recursivley call flatten function
 
 ## Write out any implementation code OR link to repl
+[REPL](https://replit.com/@KevinHartmann23/ExpertYummyUnits#index.js)
 
 ## What is the Big O complexity of your solution?
